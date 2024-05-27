@@ -70,7 +70,9 @@ import { DomHandler } from 'primeng/dom';
                         </span>
                         <div class="p-toast-message-text" [attr.data-pc-section]="'text'">
                             <div class="p-toast-summary" [attr.data-pc-section]="'summary'">{{ message.summary }}</div>
+                            @if(message.detail) {
                             <div class="p-toast-detail" [attr.data-pc-section]="'detail'">{{ message.detail }}</div>
+                            }
                         </div>
                     </ng-container>
                     <ng-container *ngTemplateOutlet="template; context: { $implicit: message }"></ng-container>
